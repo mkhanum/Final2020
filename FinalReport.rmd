@@ -39,7 +39,18 @@ barchartGC(~infected + treatment,data=dataF)
 barchartGC(~infected + treatment,data=dataF, type="percent", main="gal")
            
 ```
+  
 Among the females who contracted Covid-19 twice as many took the placebo. Therefore, it appears that the vaccine positively affects the target population and prevents them from getting Covid-19.  
+
+```{r}
+dataG = filter(FinalData,sex=="guy")
+barchartGC(~infected + treatment,data=dataG)
+barchartGC(~infected + treatment,data=dataG, type="percent", main="guy")
+           
+```
+  
+It appears that the vaccine has a negative effect on the guys since they are more likely to get Covid-19 if they receive the vaccine.  
+
 
 ###Numerical Summaries (gal)
 ```{r}
