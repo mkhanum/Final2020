@@ -25,11 +25,20 @@ The target populations for this study are male, female, drug users and LGBTQ.
 $H_0$:Among the target populations, the vaccine has no effect in terms of preventing Covid-19.  
 $H_A$:Among the target populations, the vaccine has an effect in terms of preventing Covid-19.  
 
-
-# Methods
-
+# Methods  
 <!--Decide on your methods:  use "variable analysis" or other appropriate descriptors.  Make sure to choose at least one graphical method and at least one numerical method. Discuss what data manipulations may be needed for example subsetting or other binning procedures and what sort of graphical displays and inferential tools will be used!-->
 
+
+Every question is of a Cat~Cat type.  
+
+# Graphical Descriptive Results
+
+```{r}
+dataF = filter(FinalData,sex=="gal")
+barchartGC(~infected + treatment,data=dataF)
+barchartGC(~infected + treatment,data=dataF, type="percent", main="gal")
+           
+```
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
