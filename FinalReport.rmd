@@ -39,6 +39,16 @@ barchartGC(~infected + treatment,data=dataF)
 barchartGC(~infected + treatment,data=dataF, type="percent", main="gal")
            
 ```
+Among the females who contracted Covid-19 twice as many took the placebo. Therefore, it appears that the vaccine positively affects the target population and prevents them from getting Covid-19.  
+
+###Numerical Summaries (gal)
+```{r}
+table1 <- xtabs(~infected + treatment,data=dataF)
+rowPerc(table1)
+colPerc(table1)
+```
+Discuss:
+
 # Results
 
 <!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
