@@ -62,14 +62,25 @@ From the graph above, it appears that the vaccine has a negative effect on gay p
 
 
 
-###Numerical Summaries (gal)
+### Numerical Summaries (gal)  
+  
 ```{r}
 table1 <- xtabs(~infected + treatment,data=dataF)
 rowPerc(table1)
 colPerc(table1)
 ```
   
-The numerical summary shows that among all females, only 33.11 and 4.44 percent of females were infected with COVID after receiving the vaccine, indicating that it has a positive impact on the female population.  
+The numerical summary shows that among all females, only 33.11 were infected with COVID while a higher percentage of females were okay after receiving the vaccine, indicating that it has a positive impact on the female population.  
+
+### Numerical Summaries (guy)
+
+```{r}
+table1 <- xtabs(~infected + treatment,data=dataG)
+rowPerc(table1)
+colPerc(table1)
+```
+  
+Among all male population, 58.16 percent of males got infected with COVID after receiving the vaccine. This shows that the vaccine makes male population more prone to get the COVID.  
 
 
 # Results
