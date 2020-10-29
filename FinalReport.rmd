@@ -51,6 +51,16 @@ barchartGC(~infected + treatment,data=dataG, type="percent", main="guy")
   
 It appears that the vaccine has a negative effect on the guys since they are more likely to get Covid-19 if they receive the vaccine.  
 
+```{r}
+DataLGBTQ = filter(FinalData,LGBTQ=="gay")
+barchartGC(~infected + treatment,data=DataLGBTQ)
+barchartGC(~infected + treatment,data=DataLGBTQ, type="percent", main="gays")
+           
+```
+  
+From the graph above, it appears that the vaccine has a negative effect on gay population since there is more than 60 percent of chance for them to get COVID if they receive the vaccine.  
+
+
 
 ###Numerical Summaries (gal)
 ```{r}
