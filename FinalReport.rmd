@@ -68,7 +68,9 @@ table1 <- xtabs(~infected + treatment,data=dataF)
 rowPerc(table1)
 colPerc(table1)
 ```
-Discuss:
+  
+The numerical summary shows that among all females, only 33.11 and 4.44 percent of females were infected with COVID after receiving the vaccine, indicating that it has a positive impact on the female population.  
+
 
 # Results
 
