@@ -59,6 +59,8 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+  
+As the data shows, the p value for the "gal" population came out to be less than 0.05 which allows us to reject the null hypothesis. The vaccine does have a positive effect on the female population and makes them less susceptible from getting COVID.  
 
 # Male Graphical Result
 
@@ -88,6 +90,7 @@ chisq.test(table1)
 chisqtestGC(table1)
 fisher.test(table1)
 ```
+The p value for "guy" population came out to be less than 0.05 as well which means we reject the null hypothesis. However, the vaccine has a negative effect on males because receiving the vaccine makes them more susceptible of getting COVID.   
 
 # LGBTQ Graphical Result
 
@@ -124,7 +127,6 @@ barchartGC(~infected + treatment,data=DataDrugUser)
 barchartGC(~infected + treatment,data=DataDrugUser, type="percent", main="DrugUser")
            
 ```
-
 
 ### Numerical Summaries (DrugUser)  
 ```{r}
