@@ -32,7 +32,7 @@ $H_A$:Among the target populations, the vaccine has an effect in terms of preven
 Every question is of a Cat~Cat type.  
 
 # Graphical Descriptive Results
-# Female report
+# Female Graphical Result
 ```{r}
 dataF = filter(FinalData,sex=="gal")
 barchartGC(~infected + treatment,data=dataF)
@@ -41,37 +41,6 @@ barchartGC(~infected + treatment,data=dataF, type="percent", main="gal")
 ```
   
 Among the females who contracted Covid-19 twice as many took the placebo. Therefore, it appears that the vaccine positively affects the target population and prevents them from getting Covid-19.  
-
-# Male report
-
-```{r}
-dataG = filter(FinalData,sex=="guy")
-barchartGC(~infected + treatment,data=dataG)
-barchartGC(~infected + treatment,data=dataG, type="percent", main="guy")
-           
-```
-  
-It appears that the vaccine has a negative effect on the guys since they are more likely to get Covid-19 if they receive the vaccine.  
-
-# LGBTQ Report
-
-```{r}
-DataLGBTQ = filter(FinalData,LGBTQ=="gay")
-barchartGC(~infected + treatment,data=DataLGBTQ)
-barchartGC(~infected + treatment,data=DataLGBTQ, type="percent", main="gays")
-           
-```
-  
-From the graph above, it appears that the vaccine has a negative effect on gay population since there is more than 60 percent of chance for them to get COVID if they receive the vaccine.  
-
-#Drug Users report  
-
-```{r}
-DataDrugUser = filter(FinalData,DrugUser=="yes")
-barchartGC(~infected + treatment,data=DataDrugUser)
-barchartGC(~infected + treatment,data=DataDrugUser, type="percent", main="DrugUser")
-           
-```
 
 ### Numerical Summaries (gal)  
   
@@ -83,6 +52,25 @@ colPerc(table1)
   
 The numerical summary shows that among all females, only 33.11 were infected with COVID while a higher percentage of females were okay after receiving the vaccine, indicating that it has a positive impact on the female population.  
 
+#Inferential Result (gal)  
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+# Male Graphical Result
+
+```{r}
+dataG = filter(FinalData,sex=="guy")
+barchartGC(~infected + treatment,data=dataG)
+barchartGC(~infected + treatment,data=dataG, type="percent", main="guy")
+           
+```
+  
+It appears that the vaccine has a negative effect on the guys since they are more likely to get Covid-19 if they receive the vaccine.  
+  
 ### Numerical Summaries (guy)
 
 ```{r}
@@ -91,17 +79,69 @@ rowPerc(table1)
 colPerc(table1)
 ```
   
-Among all male population, 58.16 percent of males got infected with COVID after receiving the vaccine. This shows that the vaccine makes male population more prone to get the COVID.  
+Among all male population, 58.16 percent of males got infected with COVID after receiving the vaccine. This shows that the vaccine makes male population more prone to get the COVID.   
+  
+#Inferential Result (guy)  
 
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+# LGBTQ Graphical Result
+
+```{r}
+DataLGBTQ = filter(FinalData,LGBTQ=="gay")
+barchartGC(~infected + treatment,data=DataLGBTQ)
+barchartGC(~infected + treatment,data=DataLGBTQ, type="percent", main="gays")
+           
+```
+  
+From the graph above, it appears that the vaccine has a negative effect on gay population since there is more than 60 percent of chance for them to get COVID if they receive the vaccine.  
 
 ### Numerical Summaries (gay)  
+```{r}
+table1 <- xtabs(~infected + treatment,data=DataLGBTQ)
+rowPerc(table1)
+colPerc(table1)
+```
+Explain
+
+#Inferential Result (gay)
+
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+
+#Drug Users Graphical Result  
+
+```{r}
+DataDrugUser = filter(FinalData,DrugUser=="yes")
+barchartGC(~infected + treatment,data=DataDrugUser)
+barchartGC(~infected + treatment,data=DataDrugUser, type="percent", main="DrugUser")
+           
+```
 
 
-# Results
+### Numerical Summaries (DrugUser)  
+```{r}
+table1 <- xtabs(~infected + treatment,data=DataDrugUser)
+rowPerc(table1)
+colPerc(table1)
+```
+  
+Explain  
 
-<!--Divide this section into two sub-sections:  One for your descriptive  results and one for your inferential results.!-->
+#Inferential Result (DrugUser)  
 
-
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
 
 # Discussion and Conclusion
 
