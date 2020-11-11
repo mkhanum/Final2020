@@ -501,7 +501,8 @@ rowPerc(table1)</code></pre>
 ## sample estimates:
 ## odds ratio 
 ##  0.4889403</code></pre>
-<p>As the data shows, the p value for the “gal” population came out to be less than 0.05 which allows us to reject the null hypothesis. The vaccine does have a positive effect on the female population and makes them less susceptible from getting COVID.</p>
+<p>The Fisher test shows the odd of getting COVID are 0.49 to 1. The confidence interval for the odds ratio is 0.41 to 0.58.<br />
+As the data shows, the p value for the “gal” population came out to be less than 0.05 which allows us to reject the null hypothesis. The vaccine does have a positive effect on the female population and makes them less susceptible from getting COVID.</p>
 </div>
 </div>
 <div id="male-graphical-result" class="section level1">
@@ -571,6 +572,7 @@ rowPerc(table1)</code></pre>
 ## sample estimates:
 ## odds ratio 
 ##   1.473872</code></pre>
+<p>The Fisher test shows the odd of getting COVID are 1.47 to 1. The confidence interval for the odds ratio is 1.17 to 1.85.</p>
 <p>The p value for “guy” population came out to be less than 0.05 as well which means we reject the null hypothesis. However, the vaccine has a negative effect on males because receiving the vaccine makes them more susceptible of getting COVID.</p>
 </div>
 </div>
@@ -596,7 +598,7 @@ rowPerc(table1)</code></pre>
 ##    covid   7.97    3.36
 ##    OK     92.03   96.64
 ##    Total 100.00  100.00</code></pre>
-<p>Explain</p>
+<p>From the data above, it shows that 70.69 percent of LGBTQ population contracted COVID with the vaccine while 49.17 percent of population did not contract the virus without the vaccine.</p>
 <p>#Inferential Result (gay)</p>
 <pre class="r"><code>chisq.test(table1)</code></pre>
 <pre><code>## 
@@ -641,6 +643,7 @@ rowPerc(table1)</code></pre>
 ## sample estimates:
 ## odds ratio 
 ##   2.492206</code></pre>
+<p>The Fisher test shows the odd of getting COVID are 2.49 to 1. The confidence interval for the odds ratio is 1.36 to 3.87.</p>
 <p>#Drug Users Graphical Result</p>
 <pre class="r"><code>DataDrugUser = filter(FinalData,DrugUser==&quot;yes&quot;)
 barchartGC(~infected + treatment,data=DataDrugUser)</code></pre>
@@ -707,6 +710,7 @@ rowPerc(table1)</code></pre>
 ## sample estimates:
 ## odds ratio 
 ##  0.5455093</code></pre>
+<p>The Fisher test shows the odd of getting COVID are 0.54 to 1. The confidence interval for the odds ratio is 0.35 to 0.82.</p>
 </div>
 </div>
 <div id="discussion-and-conclusion" class="section level1">
