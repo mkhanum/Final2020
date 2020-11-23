@@ -11,7 +11,7 @@
 
 <meta name="author" content="Marium Khanum" />
 
-<meta name="date" content="2020-10-27" />
+<meta name="date" content="2020-11-22" />
 
 <title>Covid91 vaccine study Final2020</title>
 
@@ -413,7 +413,7 @@ summary {
 
 <h1 class="title toc-ignore">Covid91 vaccine study Final2020</h1>
 <h4 class="author">Marium Khanum</h4>
-<h4 class="date">10/27/2020</h4>
+<h4 class="date">11/22/2020</h4>
 
 </div>
 
@@ -598,7 +598,7 @@ rowPerc(table1)</code></pre>
 ##    covid   7.97    3.36
 ##    OK     92.03   96.64
 ##    Total 100.00  100.00</code></pre>
-<p>From the data above, it shows that 70.69 percent of LGBTQ population contracted COVID with the vaccine while 49.17 percent of population did not contract the virus without the vaccine.</p>
+<p>From the data above, it shows that 70.69 percent of LGBTQ population contracted COVID with the vaccine while 49.17 percent of population did not.</p>
 <p>#Inferential Result (gay)</p>
 <pre class="r"><code>chisq.test(table1)</code></pre>
 <pre><code>## 
@@ -643,7 +643,8 @@ rowPerc(table1)</code></pre>
 ## sample estimates:
 ## odds ratio 
 ##   2.492206</code></pre>
-<p>The Fisher test shows the odd of getting COVID are 2.49 to 1. The confidence interval for the odds ratio is 1.36 to 3.87.</p>
+<p>The Fisher test shows the odd of getting COVID are 2.49 to 1. The confidence interval for the odds ratio is 1.36 to 3.87.<br />
+The P value in this case came out to be 1.05e-05 which is less than 0.05 therefore we reject null hypothesis. The vaccine has an effect on the LGBTQ population and makes them more prone to contract COVID after receiving the vaccine.</p>
 <p>#Drug Users Graphical Result</p>
 <pre class="r"><code>DataDrugUser = filter(FinalData,DrugUser==&quot;yes&quot;)
 barchartGC(~infected + treatment,data=DataDrugUser)</code></pre>
@@ -666,8 +667,10 @@ rowPerc(table1)</code></pre>
 ##    covid   3.63    6.46
 ##    OK     96.37   93.54
 ##    Total 100.00  100.00</code></pre>
-<p>According to the data above, 33.33 percent contracted COVID with the vaccine and 47.83 percent did not. From this data it seems that we are having the same results from people infected and people who got COVID with the treatment.</p>
-<p>#Inferential Result (DrugUser)</p>
+<p>According to the data above, 33.33 percent contracted COVID with the vaccine and 47.83 percent did not. From this data it seems that we are getting the same results from people infected and people who got COVID with the treatment.</p>
+</div>
+<div id="inferential-result-druguser" class="section level2">
+<h2>Inferential Result (DrugUser)</h2>
 <pre class="r"><code>chisq.test(table1)</code></pre>
 <pre><code>## 
 ##  Pearson&#39;s Chi-squared test with Yates&#39; continuity correction
@@ -714,10 +717,6 @@ rowPerc(table1)</code></pre>
 <p>The Fisher test shows the odd of getting COVID are 0.54 to 1. The confidence interval for the odds ratio is 0.35 to 0.82.<br />
 The P value came out to be 0.0032 which is less than 0.05 therefore we reject the null hypothesis and conclude that the vaccine did have an effect in whether drug users contracted COVID.</p>
 </div>
-</div>
-<div id="discussion-and-conclusion" class="section level1">
-<h1>Discussion and Conclusion</h1>
-<!--Discussion and conclusion here.  If you found a relationship be sure to consider whether the relationship occurs because one of the variavbles causes the other, or whether they perhasps are related for some other reason.  Watch the chapter 6 videos from the GeorgeTown videos collection.!-->
 </div>
 
 
