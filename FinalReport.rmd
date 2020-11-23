@@ -92,7 +92,7 @@ fisher.test(table1)
 ```
 The Fisher test shows the odd of getting COVID are 1.47 to 1. The confidence interval for the odds ratio is 1.17 to 1.85. 
   
-The p value for "guy" population came out to be less than 0.05 as well which means we reject the null hypothesis. However, the vaccine has a negative effect on males because receiving the vaccine makes them more susceptible of getting COVID.   
+The p value for "guy" population came out to be 0.00061  less than 0.05 as well which means we reject the null hypothesis. However, the vaccine has a negative effect on males because receiving the vaccine makes them more susceptible of getting COVID.   
 
 # LGBTQ Graphical Result
 
@@ -131,6 +131,8 @@ barchartGC(~infected + treatment,data=DataDrugUser)
 barchartGC(~infected + treatment,data=DataDrugUser, type="percent", main="DrugUser")
            
 ```
+  
+The bar graph shows the difference between the drug users who contracted COVID after receiving the treatment and the one who did not. It appears that there was a higher percentage of people who did not contract COVID than the infected.  
 
 ### Numerical Summaries (DrugUser)  
 ```{r}
@@ -139,8 +141,8 @@ rowPerc(table1)
 colPerc(table1)
 ```
   
-Explain  
-
+According to the data above, 33.33 percent contracted COVID with the vaccine and 47.83 percent did not. From this data it seems that we are having the same results from people infected and people who got COVID with the treatment.   
+  
 #Inferential Result (DrugUser)  
 
 ```{r}
@@ -149,7 +151,8 @@ chisqtestGC(table1)
 fisher.test(table1)
 ```
 
-The Fisher test shows the odd of getting COVID are 0.54 to 1. The confidence interval for the odds ratio is 0.35 to 0.82. 
+The Fisher test shows the odd of getting COVID are 0.54 to 1. The confidence interval for the odds ratio is 0.35 to 0.82.   
+The P value came out to be 0.0032 which is less than 0.05 therefore we reject the null hypothesis and conclude that the vaccine did have an effect in whether drug users contracted COVID.  
 
 # Discussion and Conclusion
 
